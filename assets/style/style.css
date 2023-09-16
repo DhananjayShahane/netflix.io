@@ -1,0 +1,420 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+header{
+    position:absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav  a{
+   text-decoration: none;
+}
+
+
+nav a h2{
+    color:red;
+ }
+
+.menu{
+    display: flex;
+    gap: 15px;
+}
+
+ select{
+    padding: 5px 15px;
+    border-radius: 2px;
+}
+
+
+.menu .btn_sign_in{
+    background-color: #e50914;
+    color: white;
+    padding: 5px 15px;
+    outline: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+
+main{
+    overflow: hidden;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 96vh;
+    
+}
+
+.Netflix_Logo{
+    width: 150px;
+}
+
+
+
+main .home_section{
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1.8) 0, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 1.8) 100%);
+}
+
+
+main .home_section .home_section_wrapper{
+    color: white;
+    text-align: center;
+}
+
+main .home_section .home_section_wrapper h2{
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+main .home_section .home_section_wrapper h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+main .home_section .home_section_wrapper p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+ .input_wrapper input{
+    padding: 5px 15px;
+    width: 360px;
+    height: 45px;
+    border-radius: 5px;
+    background:#1c1511;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    opacity: 0.6;
+    
+}
+
+.input_wrapper input::placeholder{
+    color: white;
+    font-size: 15px;
+}
+
+
+ .input_wrapper button {
+    outline: none;
+    border: none;
+    background-color: #e50914;
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.container {
+    max-width: 75rem;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.banner_image{
+    max-width: 600px;
+}
+
+.tv_frame_image{
+    position:relative;
+}
+
+.video_wrapper{
+    z-index: -1;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 73%;
+    max-height: 54%;
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+a{
+    cursor: pointer;
+}
+.banner_section{
+    padding: 10px 12px;
+    background-color: black;
+    color: white;
+}
+
+.banner_inner h2{
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+.banner_inner p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+.input_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+@media only screen and (min-width: 48rem){
+    .banner_column{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(0,500px));
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        row-gap: 30px;
+        padding: 30px 0px 30px 0px;
+    }
+    .footer_section{
+        display: grid;
+        /* grid-template-rows: repeat(1,300px); */
+        grid-template-columns: repeat(4,minmax(0,230px));
+        justify-content:center;
+    }   
+}
+
+
+
+/* accordian */
+
+label {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    cursor: pointer;
+    user-select: none;
+    justify-content: center;
+    align-items: center;
+}
+
+label div:first-child {
+    width: 100%;
+    line-height: 45px;
+    margin-left: 20px;
+    font-size: 1.2rem;
+}
+
+.cross{
+    margin-right:15px;
+    /* margin-top:3px; */
+}
+
+.cross:before,.cross:after {
+    content: '';
+    border-top: 2px solid white;
+    width: 25px;
+    display: block;
+    margin-top: 18px;
+    transition: 0.3s;
+}
+
+.cross:after {
+    transform: rotate(90deg);
+    margin-top: -2px;
+}
+
+.content {
+    box-sizing: border-box;
+    font-size: 0.9em;
+    margin: 10px 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height, .5s;
+}
+
+input:checked ~ .content {
+    max-height: 400px;
+    transition: max-height, 1s;
+    overflow: hidden;
+    visibility: visible;
+    padding: 20px 1.5rem;
+    transition: all 0.25s cubic-bezier(0.5, 0, 0.1, 1) 0s;
+    text-align: left;
+    font-size: 20px;
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 255, 255);
+}
+
+input:checked ~ label .cross:before {
+    transform: rotate(180deg);
+}
+
+input:checked ~ label .cross:after {
+    transform: rotate(0deg);
+}
+
+.questions{
+    margin-top:20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height, .5s;
+}
+
+.questions label{
+    border:none;
+    box-shadow: none;
+    margin:0;
+}
+
+input:checked ~ .questions {
+    max-height: 400px;
+    border-bottom:2px solid #3E474F;
+    transition: 1s;
+}
+
+/* input {
+    display: none;
+} */
+
+.accordian_section{
+    width: 70%;
+}
+
+.accordian_section h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    font-family: sans-serif;
+}
+
+.accordian_wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.wrap-1{
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+}
+.wrap-2{
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+}
+.wrap-3{
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+}
+.wrap-4{
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+}
+.wrap-5{
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+}
+.wrap-6{
+    background-color: rgb(45,45,45);
+    color: rgb(255,255,255);
+}
+
+.wrap-1 input{
+    display: none;
+}
+.wrap-2 input{
+    display: none;
+}
+.wrap-3 input{
+    display: none;
+}
+.wrap-4 input{
+    display: none;
+}
+.wrap-5 input{
+    display: none;
+}
+.wrap-6 input{
+    display: none;
+}
+
+.email_section{
+    padding-bottom: 50px;
+}
+
+.email_section h3{
+    font-size: 1.25rem;
+    font-weight: 900;
+    text-align: center;
+    
+}
+
+.diveder{
+    width: 100%;
+    height: 0.5rem;
+    /* position: absolute; */
+    bottom: -0.5rem;
+    background-color: rgb(35,35,35);
+}
+
+
+.footer_section div ul li{
+    list-style: none;
+    line-height: 40px;
+}
+.footer_section div ul li a {
+    font-size: 1.10rem;
+    color: white;
+}
+
+a{
+  color: white;
+}
+.footer_wrapper{
+    padding-top: 40px;
+}
+
+@media screen and (max-width:896px)  {
+    .input_wrapper input {
+      width: 260px;
+    }
+    main .home_section .home_section_wrapper h2 {
+        font-size: 2.25rem;
+        font-weight: 900;
+    }
+    nav{
+        width: 90%;
+    }
+    .cross:before, .cross:after {
+        width: 13px;
+    }
+    label div:first-child {
+        font-size: 15px;
+    }
+    .Netflix_Logo{
+        width: 100px;
+    }
+    
+}
